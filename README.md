@@ -1,16 +1,9 @@
-# cgpa_calculator
+# cgpa_calculator_Flutter
 
-A new Flutter application.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+![HomaPage](https://user-images.githubusercontent.com/63815890/93190531-4e8f6780-f765-11ea-9a06-f3b6fe375ab5.png)
+![AlertDialogBox](https://user-images.githubusercontent.com/63815890/93190534-4f27fe00-f765-11ea-80f7-69fcc97765d9.png)
+![CGPA Page](https://user-images.githubusercontent.com/63815890/93190524-4c2d0d80-f765-11ea-8f6f-03a2983a55e2.png)
+![CGPA Result Page](https://user-images.githubusercontent.com/63815890/93190526-4e8f6780-f765-11ea-8af4-c135089c56c7.png)
+
