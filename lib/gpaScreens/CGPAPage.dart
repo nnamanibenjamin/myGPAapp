@@ -41,9 +41,9 @@ class GPAcalcstate extends State<cgpaCalc> {
             children: [
               //subject er text
                Text(
-                "Semester ${i+1}:",
+                "Course ${i+1}:",
                 style:  TextStyle(
-                    color: Colors.black87, fontWeight: FontWeight.bold),
+                    color: Colors.black, fontWeight: FontWeight.bold),
               ),
                Padding(
                 padding:  EdgeInsets.all(10.0),
@@ -51,10 +51,10 @@ class GPAcalcstate extends State<cgpaCalc> {
 
               //sgpa er textField
               SizedBox(
-                width: 60.0,
+                width: 80.0,
                 child: TextField(
                   keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: "SGPA"),
+                  decoration: InputDecoration(hintText: "Grade"),
                   onChanged: (value) {
                     setState(() {
                       _sgpaController[i] = value;
@@ -68,10 +68,10 @@ class GPAcalcstate extends State<cgpaCalc> {
 
               //credit er textField
               SizedBox(
-                width: 60.0,
+                width: 80.0,
                 child: TextField(
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(hintText: "CREDIT"),
+                  keyboardType: TextInputType.name,
+                  decoration: InputDecoration(hintText: "Credit Load"),
                   onChanged: (s) {
                     setState(() {
                       _creditController[i] = s;
@@ -88,9 +88,9 @@ class GPAcalcstate extends State<cgpaCalc> {
     return Scaffold(
       appBar: AppBar(
         title: Text("GPA calculator"),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.green,
       ),
-      backgroundColor: Colors.orange[100],
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -100,7 +100,7 @@ class GPAcalcstate extends State<cgpaCalc> {
         padding: EdgeInsets.only(left: 120.0,top: 20.0),
       ),
          Text(
-          "SGPA",
+          "Grade",
           overflow: TextOverflow.ellipsis,
           style:  TextStyle(fontWeight: FontWeight.bold,fontSize: 17.0),
         ),
@@ -121,29 +121,32 @@ class GPAcalcstate extends State<cgpaCalc> {
               decoration: BoxDecoration(
                   border:  Border.all(color: Colors.transparent, width: 30.0)),
               child: Column(
-                children: fields,// এই ফিল্ডস উইজেট টাই একচুয়ালি রিটার্ন করবে যে আমাদের কয়টা ইনপুট ফিল্ড দরকার।।।
+                children: fields,
               ),
             ),
 
             RaisedButton(
               padding: EdgeInsets.all(10.0),
-              color: Colors.deepOrange,
+              color: Colors.green,
               child: Text("Calculate CGPA",
               style: TextStyle(fontSize: 30.0,color: Colors.white),),
               onPressed: () {
 
                 for (int i = 0; i < widget.n; i++) {
                   if(_creditController[i]==null){
+
                     insertedValue = false;
                     continue;
                   }
+
                   if(_sgpaController[i]==null){
                     insertedValue = false;
                     continue;
                   }
 
-                  double sgpa = double.parse(_sgpaController[i]);
-                  int credit = int.parse(_creditController[i]);
+                  int sgpa = int.parse(_sgpaController[i]);
+                  double credit = double.parse(_creditController[i]);
+
 
                   double creditMulSGPA = credit * sgpa;
                   sumOfCreditMulSGPA += creditMulSGPA; //sumOfCreditMulSGPA = sumOfCreditMulSGPA+creditMulSGPA

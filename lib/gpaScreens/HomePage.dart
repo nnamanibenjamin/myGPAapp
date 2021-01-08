@@ -13,8 +13,8 @@ class HomePageState extends State<HomePage>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title:Text("CGPA calculator"), backgroundColor: Colors.lightBlueAccent),
-      backgroundColor: Colors.orange[100],
+      appBar: AppBar(title:Text("GPA calculator"), backgroundColor: Colors.green),
+      backgroundColor: Colors.white,
       body:Container(
         decoration: BoxDecoration(border: Border.all(color: Colors.transparent,width: 25.0),color: Colors.transparent),
         child: ListView(
@@ -23,8 +23,8 @@ class HomePageState extends State<HomePage>{
               textAlign: TextAlign.center,
               autofocus: true,
               decoration:  InputDecoration(
-                  fillColor: Colors.lightBlueAccent,
-                  hintText: "Enter number of semester",
+                  fillColor: Colors.green,
+                  hintText: "Enter number of Courses",
                   hintStyle: TextStyle(color: Colors.black54)
               ),
               keyboardType: TextInputType.number,
@@ -40,7 +40,7 @@ class HomePageState extends State<HomePage>{
               },
             ),
              IconButton(
-              icon: Icon(Icons.touch_app,size: 35.0,color: Colors.deepPurpleAccent,),
+              icon: Icon(Icons.touch_app,size: 35.0,color: Colors.green,),
               onPressed: (){
                 if(n is int && n > 0 ){
                   int pass=n;
@@ -66,7 +66,7 @@ class HomePageState extends State<HomePage>{
       barrierDismissible: false, // user must tap button!
       builder: (BuildContext context) {
         return AlertDialog(
-          title:  Text('Please enter number of semester to calculate CGPA'),
+          title:  Text('Please enter number of Courses to calculate your GPA'),
 
           actions: <Widget>[
              FlatButton(

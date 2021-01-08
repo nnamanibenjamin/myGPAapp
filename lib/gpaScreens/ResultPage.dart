@@ -7,11 +7,11 @@ class ResultPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return  Material(
-      color: Colors.deepOrange,
+      color: Colors.green,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-           Text("Your CGPA is: ",style:  TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40.0)),
+           Text("Your GPA is: ",style:  TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 40.0)),
            Text(score.toStringAsFixed(score.truncateToDouble() == score ? 0 : 2),
               style:  TextStyle(color: Colors.black,fontWeight: FontWeight.bold,fontSize: 50.0)),
            IconButton(
